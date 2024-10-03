@@ -1,0 +1,40 @@
+%===============================================================================
+\section{Goal}
+\label{section:goal}
+
+The goal of the project is to deliver the following:
+\begin{enumerate}
+    \item One \ac{ssl}-RoboCup division B robot which complies with all \ac{ssl}-RoboCup regulations and Swedish laws and standards\footnote{European laws and standards will be deferred to if the Swedish and \ac{ssl}-RoboCup rules, laws and standards are ambiguous or do not address a specific topic.}. The robot is to be capable of:
+    \begin{itemize}
+        \item Taking actions which are oriented towards goal scoring
+        \begin{itemize}
+            \item Omnidirectional movement towards target pose
+            \item Kick ball
+            \item Pass ball
+        \end{itemize}
+        \item Taking actions which impede the enemy teams ability to score goals
+        \begin{itemize}
+            \item Block ball when it has been kicked by an enemy (straight ground kick with no spin)
+        \end{itemize}
+        \item Not crash into other robots or the arena
+        \begin{itemize}
+            \item This point is nullified when trying to steal the ball, as long as no permanent damage is inflicted on any robot
+        \end{itemize}
+        \item Act accordingly to the referee commands and signals
+        \item Switch playing half on demand
+        \item (See\:\cite{noauthor_rules_2024} for the demands which the robots must fulfil to comply with the \ac{ssl}-RoboCup rules, they will not be listed here but are included as goals)
+    \end{itemize}
+    \item Simulation interface, allowing for interaction with the grSim simulation.
+    \item Hardware interface, allowing low level control over the robots.
+    \item \ac{ssl} interface, allowing for interaction with the \ac{ssl} tools ssl-vision and ssl-game-controller, and integration of AutoReferee.
+    \item Robot control using \ac{ros2} Humble and/or micro-\acs{ros}
+    \begin{itemize}
+        \item Path planning
+        \item Setting up robot for a shot
+    \end{itemize}
+    \item Centralised strategy and tactics planner for the robot team using \ac{ai}, commanding the high level moves of all robots.
+    \item Peer to peer communication protocol using Protobuf and \ac{ros2} Humble, which can select between two carrier frequencies. 
+    \item The entire system passing \ac{hil} testing.
+\end{enumerate}
+
+%===============================================================================

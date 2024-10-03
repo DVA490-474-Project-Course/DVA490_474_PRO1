@@ -1,0 +1,34 @@
+\appendix
+\section{Appendix: Bill of Materials}
+\label{appendix:bom}
+
+
+\begin{table}
+    \centering
+    \resizebox{\columnwidth}{!}{\noindent\begin{tabular}{|c|c|c|c|} \hline
+         \textbf{Component} & \textbf{Features} & \textbf{Purpose} & \textbf{Price (SEK)}  \\ \hline
+         DF45L024048-A-Brushless \ac{dc} Motor & Good torque, built in sensors and, small footprint & & $3273,6 (818,4 \cdot 4)$ \\ \hline
+         Hobbywing FPV XRotor 3110 900KV & Supports very high \ac{rpm} which is needed for the dribbler & & $175,2$\\
+         \hline
+         Moetus R4 & A field oriented controller with hall effect sensors (primary option if a Raspberry Pi is the main \ac{mcu}) & & $3228 (807 \cdot 4)$\\
+         \hline
+         ESP32-WROVER-IE & A \ac{mcu} which will collect sensory information (however not from the camera), communicate with the external computer handling the overall strategy and, control the motors & & Sponsored by \ac{mdu}\\
+         \hline
+         Raspberry Pi 4 Model B/8GB & A \ac{mcu} which will handle the sensory input from the camera, run Nav2 and send motor controller instruction to the ESP32 & & $979$\\
+         \hline
+         6s 1300mAh-120C-GNB HV XT60 & A battery with sufficient energy capacity, low price, small footprint and, low weight & & $351,2$\\
+         \hline
+         LT3750 & Capacitor charging controller for kicker, easy to adjust output voltage and integrated security control system & & $146,9$\\
+         \hline
+         iC-PX2604 and PX01S 26-30 & Optical encoder and encoder wheel for a far more accurate readings of wheel orientation & & $897,6 (224,4 \cdot 4)$\\
+         \hline
+         WSEN-ISDS 6 Axis \ac{imu} & A 6 axis \ac{imu} which can read up to $\pm 16g$ and $\pm 2000 dps$ & & Sponsored by Würth Electronics\\
+         \hline
+         Raspberry Pi Camera Module 3 & A commonly occurring camera in \ac{ssl} module used for object detection & & $369$\\
+         \hline
+         LEDEX 195207-228 & A solenoid for the kicker & & Sponsored by \ac{mdu}\\
+         \hline
+    \end{tabular}}
+    \caption{The preliminary \acl{bom} for the project.}
+    \label{tab:bom}
+\end{table}

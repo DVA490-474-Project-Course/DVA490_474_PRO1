@@ -1,0 +1,119 @@
+%===============================================================================
+\section{Requirement}
+\label{section:requirement}
+
+Requirements are necessary to establish in order to ensure that a satisfactory product can be produced and tested, ensuring it meets the original demands placed on the project.
+
+%===============================================================================
+\subsection{Product requirements}
+
+The following will describe the features, functionality and specifications which the final product must have.
+
+%-------------------------------------------------------------------------------
+
+%\helper{The product specification describes the product that is to be delivered. It is a description of the product in terms of its functionality, performance, quality, etc.}
+
+%===============================================================================
+\subsubsection{Functional requirements}
+
+The following functional requirements were established:
+\begin{enumerate}
+    \item Robot
+    \begin{itemize}
+        \item Kick the ball towards designated target
+        \item Pass the ball towards designated robot
+        \item Block ball
+        \item Move to designated target
+        \item Omnidiretional (holonomic) movement
+        \item Not crash into other robots
+        \begin{itemize}
+            \item Unless it is an attempt at trying to steal the ball from an opponent or to prevent opponents from scoring a goal
+            \item Never acceptable if it causes any permanent damage on either robot
+        \end{itemize}
+        \item Not crash into the arena
+        \item React accordingly to referee signals
+        \item Send robot status information
+    \end{itemize}
+    \item Centralised strategic planner
+    \begin{itemize}
+        \item \ac{ai} functionality
+        \item Switch playing half on demand
+        \item Ensure actions for each robot is not taken from an individualistic point of view, but from a overarching team perspective with a strategic plan aimed at obtaining victory
+    \end{itemize}
+    \item Simulation interface
+    \begin{itemize}
+        \item Send packages containing robot commands to grSim
+    \end{itemize}
+    \item Hardware interface
+    \begin{itemize}
+        \item Control wheel motors
+        \item Control kicker
+        \item Provide sensor data
+        \item Provide robot status information
+    \end{itemize}
+    \item SSL interface
+    \begin{itemize}
+        \item Receive positional data from ssl-vision
+        \item Receive referee commands from ssl-game-controller
+        \begin{itemize}
+            \item Have AutoReferee functionality
+            \item Have humanly operated referee functionality
+        \end{itemize} 
+    \end{itemize}
+    \item Communication protocol
+    \begin{itemize}
+        \item Be peer to peer
+        \item Ability to select between two carrier frequencies
+    \end{itemize}
+\end{enumerate}
+
+%-------------------------------------------------------------------------------
+
+%\helper{The functional requirements describe the functions that the product must do.}
+
+%===============================================================================
+\subsubsection{Non-functional requirements}
+
+The following non-functional requirements were established:
+\begin{enumerate}
+    \item Simulate 12 robots.
+    \item Comply with all \ac{ssl}-RoboCup rules, see\:\cite{noauthor_rules_2024}.
+    \item A latency lower than $400\:\text{ms}$ from any point in time at which the centralised strategy planner gives a command until it starts executing on the robot.
+    \item The robot must have four wheels.
+    \item The centralised strategy planner must run on a central computer.
+    \item Communication protocol
+    \begin{itemize}
+        \item Use Protobuf
+        \item Use \ac{ros2} Humble
+    \end{itemize}
+\end{enumerate}
+
+%-------------------------------------------------------------------------------
+
+%\helper{The non-functional requirements describe the technical specifications of the product in details: e.g. colors, performance, quality metrics.}
+
+%===============================================================================
+\subsection{Project requirements}
+
+The project has locked time and cost, focus will thus be placed on scope to ensure the project does not expand unrealistically, resulting in an inability to deliver the product. The following list describes what must be done in the project to be able to deliver the product:
+\begin{itemize}
+    \item Limit the project as described in Limitations, see section\:\ref{section:limiations}.
+    \item Keep to the scope of the project as described in Scope, see section\:\ref{section:scope}. 
+    \item Keep within budget, see Project budget, section\:\ref{section:project_budget}.
+    \item Facilitate clear and good communication within the team and with the sponsor.
+\end{itemize}
+
+%-------------------------------------------------------------------------------
+
+%\helper{Requirements on the execution and prioritization between the project’s triple constraints.}
+
+%===============================================================================
+\subsection{Prerequisites}
+
+The project demands that the sponsors provide the hardware team with full access to the $\text{B.nr}\:326$ workshop and the tools and machines that should be present there. If additional training is required to operate these tools and machines, then the project demands that this training be afforded to the hardware team latest 2024-10-10.
+
+%-------------------------------------------------------------------------------
+
+%\helper{Demands on the project’s sponsor/owner or client that have to be achieved to ensure the project’s execution and result.}
+
+%===============================================================================

@@ -1,0 +1,118 @@
+\newpage
+%===============================================================================
+\section{Testing Plan}
+\label{section:testing_plan}
+
+Testing is required to ensure the product works as intended, for this reason the following testing plan was established. The plan should help onboard new developers and clearly show the testing practices employed in the project, helping reveal possible flaws and oversights.
+
+%-------------------------------------------------------------------------------
+
+\begin{comment}
+\helper{General example}
+This Testing Plan provides a detailed outline of the testing strategy, approach, and procedures we employ in our project. It establishes a clear pathway for validating and verifying our project's software and hardware components, ensuring they meet the specified requirements. The plan is designed to offer clarity for any team members joining at any project lifecycle stage. Understanding this plan will provide a solid understanding of our testing practices and expectations, aligning with our overall project goals.
+\end{comment}
+
+%===============================================================================
+\subsection{Testing Methodology}
+
+% Verification
+% Software
+The software team will make extensive use of unit and integration tests. This verification methodology was chosen because it was expected to work the best with the teams experience and resources.
+% Hardware
+The hardware team will create standardised tests, which ensure the hardware components perform according to the specifications in their respective data sheet. If the tests pass the robot is working as expected.
+
+% Validation
+Validation will be done by constant interaction with the stakeholder and client, informing them of the current state and direction of the project. Their feedback will then ensure the correct product is being developed, and that it does not turn into something else besides the desired product and keeps to the goal of the project.
+
+%-------------------------------------------------------------------------------
+
+%Our team strictly follows the [specific testing methodology - e.g., Manual, Automated, Unit, Integration, etc.]. This methodology has been chosen due to its [specific benefits] and involves procedures such as [describe procedures].
+
+%===============================================================================
+\subsection{Testing Team Structure and Roles}
+
+The team size for the project does not allow for a dedicated testing team. However software developers are responsible for creating and running unit tests for the code they have developed, as well as integration tests for all modules and sub modules. They must additionally document the test results as described in Documentation plan (see section\:\ref{section:documentation_plan}). The software lead is responsible for overseeing and ensuring the proper tests and documentation of the test results are available.
+
+%-------------------------------------------------------------------------------
+
+\begin{comment}
+Please note: The roles listed here might have additional responsibilities outlined in the corresponding plans (Development Plan, Documentation Plan, Communication Plan).
+
+Our testing team includes the following roles:
+
+\begin{itemize}
+\item \textbf{Testing Team Leader:} Oversees the overall testing strategy, coordinates with the development team, and ensures thorough and timely testing.
+\item \textbf{Test Engineer:} Designs, develops, and executes test cases. They are also responsible for documenting and communicating the results to the team.
+\end{itemize}
+\end{comment}
+
+%===============================================================================
+\subsection{Testing Tools, Technologies, and Systems}
+
+The testing tools which will be used are:
+\begin{itemize}
+    \item \href{https://google.github.io/googletest/}{GoogleTest}: GoogleTest will be used for unit and integration testing.
+\end{itemize}
+
+%-------------------------------------------------------------------------------
+
+\begin{comment}
+We leverage the following tools, technologies, and systems in our testing process:
+
+\begin{itemize}
+\item \textbf{Testing Tools:} We utilize [Testing Tool/Platform Name, version] for [purpose], and it can be downloaded from [source].
+\item \textbf{Bug Tracking Tools:} For tracking and managing defects, we use [Tool/Platform Name, version], which can be downloaded from [source].
+\item \textbf{Test Management Tools:} We utilize [Tool/Platform Name, version] for [purpose], and it can be downloaded from [source].
+\item \textbf{Operating Systems:} We primarily operate on [Operating System name and version]. Please align your system with the same for consistency and compatibility. If your system operates differently, notify the team for assistance with potential compatibility issues.
+\end{itemize}
+
+Please install the correct version numbers as specified for consistency and compatibility.
+\end{comment}
+
+%===============================================================================
+\subsection{Testing Standards and Guidelines}
+
+The project follows no testing standards or guidelines.
+
+%-------------------------------------------------------------------------------
+
+%To ensure consistent and high-quality testing, we follow these testing standards and guidelines: [Outline specific standards and guidelines]. For more detailed information, please refer to our detailed testing standards document [footnote or ref to document].
+
+%===============================================================================
+\subsection{Version Control for Test Artifacts}
+
+This project will use the version control tool Git, see Version Control section\:\ref{subsection:version_control}.
+
+%-------------------------------------------------------------------------------
+
+%We utilize [Version Control System Name, e.g., Git] to manage changes to our test artefacts and maintain different versions. For detailed guidance on using this system, please refer to our [footnote or ref to version control usage guide].
+
+%===============================================================================
+\subsection{Bug Reporting and Tracking}
+
+Bug reporting and documentation is kept track of using the changelog file in each repositories docs directory. Software developers are responsible for documenting the status of any bugs they encounter.
+
+%-------------------------------------------------------------------------------
+
+%We use [Bug Tracking System Name] to log and track identified defects. Each testing team member is responsible for documenting and reporting bugs according to our bug reporting guidelines, outlined in our [footnote or ref to Bug Reporting Guide].
+
+%===============================================================================
+\subsection{Test Schedule}
+
+All tests are to be run before committing an update or change to GitHub.
+
+%-------------------------------------------------------------------------------
+
+%Our testing schedule aligns with the overall project timeline. The detailed test schedule can be found in our project timeline document [footnote or ref to document].
+
+%===============================================================================
+\subsection{Integration and Regression Testing}
+
+Integration tests are to be done for each module and sub module.
+The project will run all unit and integration tests each time a new feature is added or changes are made to any code, as well as before doing a Git commit.
+
+%-------------------------------------------------------------------------------
+
+%Our integration and regression testing strategy involves [describe strategy, e.g., Continuous Integration]. For comprehensive information on these processes, refer to our integration and regression testing guide [footnote or ref to guide].
+
+%===============================================================================

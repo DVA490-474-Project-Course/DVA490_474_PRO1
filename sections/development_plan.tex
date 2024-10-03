@@ -1,0 +1,211 @@
+\newpage
+%===============================================================================
+\section{Development Plan}
+\label{section:development_plan}
+
+This development plan details the development process for the project, and contains important project information. It is crucial to be familiar with all of its details to be able to contribute to the project.
+
+%------------------------------------------------------------------------------
+
+%\helper{Example of a development plan}
+%This Development Plan provides a comprehensive roadmap for the project, detailing our technical approach, the development process, the methodologies we employ, and each team member's distinct roles and responsibilities. The plan is designed to facilitate seamless integration for new members joining at any project lifecycle stage. By becoming familiar with the plan, you will gain crucial insights into our work processes and project-related information, enabling you to contribute effectively and align with the team's objectives.
+
+%===============================================================================
+\subsection{Development Methodology}
+
+The project team will follow a makeshift model which is akin to the waterfall model because of the time limit placed on the project. This time limit makes it unfeasible for the team to learn a new system, thus defaulting to having a work structure which is similar to the commonly known waterfall model.
+
+%------------------------------------------------------------------------------
+
+% Our team strictly adheres to [specific methodology - e.g., Agile, Scrum, Waterfall, etc.]. We chose this methodology due to its [specific benefits], encompassing practices such as [describe practices].
+
+%===============================================================================
+\subsection{Team Structure and Roles}
+
+The team structure and roles are covered in Staffing (see section\:\ref{section:staffing}) and in Table.\:\ref{tab:contributors_roles}.
+
+%------------------------------------------------------------------------------
+
+\begin{comment}
+Please note: The roles listed here might have additional responsibilities outlined in the corresponding plans (Documentation Plan, Communication Plan, Testing Plan).
+
+Our team comprises the following roles:
+
+\begin{itemize}
+    \item \textbf{Hardware Team Leader:} Manages the hardware development process, coordinates with the software team, and ensures timely delivery while maintaining quality standards.
+    \item \textbf{Software Team Leader:} Oversee the software development process, collaborates with the hardware team, and ensure project deadlines are met with high-quality deliverables.
+    \item \textbf{Hardware Developer:} Designs, develops, tests, and troubleshoots hardware components and collaborates with the software team.
+    \item \textbf{Software Developer:} Develops, tests, and debugs software modules and coordinates with the hardware team.
+\end{itemize}
+\end{comment}
+
+%===============================================================================
+\subsection{Tools, Technologies, and Systems}
+\label{subsection:tools_technologies_and_systems}
+
+The \ac{os} that are going to be used are:
+\begin{itemize}
+    \item \href{https://releases.ubuntu.com/jammy/}{Ubuntu 22.04 LTS}: Ubuntu will be used by all software developers.
+    \begin{itemize}
+        \item \href{https://kubuntu.org/getkubuntu/}{Kubuntu 22.04.05}: Kubuntu will be used by one software developer.
+    \end{itemize}
+    \item \href{https://www.microsoft.com/en-us/download/windows}{Microsoft Windows}: Windows will be used by hardware team members for general use. Versions:
+    \begin{itemize}
+        \item 22H2 (\ac{os} Build 19045.4894)
+    \end{itemize}
+\end{itemize}
+
+The following software development tools will be used in the project:
+\begin{itemize}
+    \item \href{https://www.vim.org/vim-8.2-released.php}{Vim}: Vim will be used for coding. Versions:
+    \begin{itemize}
+        \item 8.2
+        \item 8.2.2
+    \end{itemize}
+    \item \href{https://neovim.io/}{Neovim}: Neovim will be used for coding. Versions:
+    \begin{itemize}
+        \item 0.10.0
+        \item 0.10.1
+    \end{itemize}
+    \item \href{https://www.sublimetext.com/}{Sublime Text}: Sublime Text will be used for coding. Versions:
+    \begin{itemize}
+        \item 4180
+    \end{itemize}
+    \item \href{https://code.visualstudio.com/}{Visual Studio Code}: Visual Studio Code will be used for coding. Versions:
+    \begin{itemize}
+        \item 1.93.0
+        \item 1.93.1
+    \end{itemize}
+    \item \href{https://www.jetbrains.com/clion/}{CLion}: CLion will be used for coding. Versions:
+    \begin{itemize}
+        \item 2024.2.2
+    \end{itemize}
+    \item \href{https://cmake.org/}{CMake version 20}: CMake is the build tool which will be used.
+    \item \href{https://github.com/}{GitHub}: GitHub will be used for version control.
+    \item \href{https://gitforwindows.org/}{Git Bash}: A terminal with Linux commands for Windows. Used by hardware team members as a replacement for Windows cmd and used for maintaining GitHub repository. Versions:
+    \begin{itemize}
+        \item 2,46,0,windows,1
+    \end{itemize}
+\end{itemize}
+
+Code is to be written in the programming languages:
+\begin{itemize}
+    \item \href{https://en.cppreference.com/w/cpp/20}{C++ standard 20}: all code which is to run on the final system is to be written in C++.
+\end{itemize}  
+
+The project will leverage the following libraries, middleware and formats:
+\begin{itemize}
+    \item \href{https://github.com/RoboCup-SSL/grSim}{grSim}: grSim will be used for all simulation purposes.
+    \item \href{https://github.com/RoboCup-SSL/ssl-vision}{ssl-vision}: This tool provides the positional data provided by the cameras present during \ac{ssl}-RoboCup games.
+    \item \href{https://github.com/RoboCup-SSL/ssl-game-controller}{ssl-game-controller}: This tool is used by the referee (human operator), during \ac{ssl}-RoboCup games.
+    \item \href{https://github.com/TIGERs-Mannheim/AutoReferee}{AutoReferee version 1.4.1}: auto referee software which will run during \ac{ssl}-RoboCup games.
+    \item \href{https://docs.ros.org/en/humble/index.html}{\ac{ros2} Humble}: \ac{ros2} Humble is going to be used to control the robots and for communication.
+    \item \href{https://docs.nav2.org/index.html}{Nav2}: Nav2 is going to be used for object avoidance and local path planning.
+    \item \href{https://github.com/protocolbuffers/protobuf}{Protobuf}: Protobuf will be used for communication and communication interfaces.
+    \item \href{https://freertos.org/}{FreeRTOS}: FreeRTOS will be used for low level reliability and threading.
+    \item \href{https://google.github.io/googletest/}{GoogleTest}: GoogleTest will be used for software testing.
+\end{itemize}
+
+The project will utilise the following hardware tools:
+\begin{itemize}
+    \item \href{https://www.onshape.com/en/}{OnShape}: OnShape will be used for 3D-\acs{cad} modelling.
+    \item \href{https://www.kicad.org/}{KiCAD version 8.0.5}: KiCAD will be used for creating electrical schematics.
+    \item \href{}{3D printer}: 3D printer will be used for printing the following components:
+    \begin{itemize}
+        \item Chassi
+        \item Wheels
+        \item Motor mounts
+        \item Kicker mount
+        \item Dribbler mount
+    \end{itemize}
+    \item \href{}{Soldering station}: Soldering station will be used for soldering the components on \ac{pcb}.
+    \item \href{}{Lab bench power supply}: The lab bench power supply will be used for testing the system without a battery.
+\end{itemize}
+
+The hardware which will be used:
+\begin{itemize}
+    \item See Table.\:\ref{tab:bom} available in Appendix\:\ref{appendix:bom}.
+\end{itemize}
+
+The project management tools which will be used in the the project are:
+\begin{itemize}
+    \item \href{https://mermaid.js.org/}{Mermaid}: Mermaid will be used to create gantt charts and block diagrams.
+    \item \href{https://www.edrawmax.com/}{EdrawMax}: EdrawMax will be used to create the \ac{wbs}.
+    \item \href{https://www.drawio.com/}{draw.io}: draw.io will be used to create the milestone plan.
+    \item \href{https://www.microsoft.com/en-us/microsoft-365/excel}{Microsoft Excel}: Excel will be used to create \ac{bom}.
+    \item \href{https://www.zotero.org/}{Zotero}: Zotero will be used for reference management.
+\end{itemize}
+
+The following communication tools will be used:
+\begin{itemize}
+    \item \href{https://discord.com/}{Discord}: All team communication is going to take place on discord.
+    \item \href{https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook}{Outlook}: Outlook will be used for communication with supervisors, stakeholders, additional resources (such as teachers with specific knowledge) and retailers of electronic components and sensors.
+    \item \href{https://www.microsoft.com/en-us/microsoft-teams/log-in}{Microsoft Teams}: Teams will be used for communication with collaborators (\ac{udea} and \ac{utp}).
+\end{itemize}
+
+%------------------------------------------------------------------------------
+
+\begin{comment}
+We leverage the following tools, technologies, and systems in our project:
+
+\begin{itemize}
+\item \textbf{Software Development Tools:} Include various programming languages and 3D modelling software. For instance, [Programming Language] is used for [purpose] and can be downloaded from [source]. For 3D modelling, we use [Software name], which can be downloaded from [source].
+\item \textbf{Project Management Tools:} We utilize [Tool/Platform Name, version] for [purpose], and it can be downloaded from [source].
+\item \textbf{Communication Tools:} For effective communication, we use [Tool/Platform Name, version], which can be downloaded from [source].
+\item \textbf{Hardware Tools and Software:} We utilize tools like a 3D printer ([specify model]) and PCB Design Software ([Software Name]) which can be downloaded from [source].
+\item \textbf{Operating Systems:} We primarily operate on [Operating System name and version]. Please align your system with the same for consistency and compatibility. If your system operates differently, notify the team for assistance with potential compatibility issues.
+\item \textbf{Hardware:} We primarily use [Computer model/brand] with [specify processor, RAM, storage]. Please let us know if you use a different model for compatibility checks.
+\end{itemize}
+
+Please install the correct version numbers as specified for consistency and compatibility.
+\end{comment}
+
+%===============================================================================
+\subsection{Coding Standards and Guidelines}
+
+The project will strictly adhere to the Google C++ Style Guide coding standard and the file structure described in the projects GitHub repository \href{https://github.com/DVA490-474-Project-Course/project-structure}{project-structure}\footnote{https://github.com/DVA490-474-Project-Course/project-structure}. This was done to ensure uniformity, facilitate future development and allow for easy contribution. 
+
+%------------------------------------------------------------------------------
+
+%To ensure high code quality and readability, we follow these coding standards and guidelines: [Outline specific standards and guidelines]. For more comprehensive information, refer to our detailed coding standards document [footnote or ref to document].
+
+%===============================================================================
+\subsection{Version Control}
+\label{subsection:version_control}
+
+The project will use the version control tool Git to manage changes, versions, history and documentation of all files in the project. The projects \href{https://github.com/DVA490-474-Project-Course}{GitHub}\footnote{https://github.com/DVA490-474-Project-Course} page will contain all the project material and is public and available to everyone.
+
+%------------------------------------------------------------------------------
+
+%We utilize [Version Control System Name, e.g., Git] to manage changes to our project files and maintain different versions. For detailed guidance on using this system, please refer to our [footnote or ref to version control usage guide].
+
+%===============================================================================
+\subsection{Testing and Quality Assurance}
+
+% Software
+Software testing and quality assurance will be done using GoogleTest. Unit tests will be created for every developed function. Integration tests will additionally be created for every module and sub module. All tests are to be run before committing a new feature or change to GitHub.
+
+% Hardware
+Standardised tests for the hardware will be used to calibrate sensors and verify that they behave according to the specifications in the data sheet. These tests should be done every time the robot is used. The hardware interface will use GoogleTest for testing and quality assurance. Unit tests will be created for every developed function.
+
+%------------------------------------------------------------------------------
+
+%We employ [describe testing methodologies] for our testing and QA. For detailed information on our testing process, refer to our [footnote or ref to Testing and QA document or section].
+
+%===============================================================================
+\subsection{Integration and Deployment}
+\label{subsection:integration_and_deployment}
+
+The integration of the system will follow a structured approach, combining both software and hardware modules. 
+Each software module will be developed separately and they will be integrated together once they are ready and have passed their individual unit tests for all the functions they contain. Software modules will first be integrated together with other software modules and tested using integration tests. Afterwards, the hardware components will be integrated in the tests, such as the sensors, motors, and kickers. They will be integrated one at a time with a focus on ensuring accurate output and functionality when combined with the software. 
+
+It is very important to always test and verify the functionality of the modules during the integration phase. Verification will be done by performing unit, integration, and \ac{hil} tests. 
+The software modules will be tested in a simulation environment using grSim, while \ac{hil} tests will simulate real-world conditions by integrating hardware components. 
+
+Once the functionality of the modules has been verified and all tests have passed, the deployment phase begins. At this point full deployment tests will be done, which consist of testing the entire system in deployment settings ensuring the functionality of the complete system.
+
+%------------------------------------------------------------------------------
+
+%Our integration strategy involves [describe strategy, e.g., Continuous Integration]. The deployment process includes [describe process], facilitated by specific tools. For comprehensive information on these processes, refer to our integration and deployment guide [footnote or ref to guide].
+
+%===============================================================================
