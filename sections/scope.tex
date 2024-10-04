@@ -6,26 +6,52 @@ The following is part of the scope of the project:
 \begin{itemize}
     \item Software
     \begin{itemize}
-        \item Simulation interface
-        \item Hardware interface
-        \item \ac{ssl} interface
-        \item Robot control using \ac{ros2} Humble
+        \item A simulation interface which offers an API capable of sending robot commands to the simulation software grSim
+        \item A hardware interface which offers an API for:
+        \begin{itemize}
+            \item Activating wheel motors
+            \item Activating kicker
+            \item Sending sensor data
+            \item Sending robot status information
+        \end{itemize}
+        \item An \ac{ssl} interface offering an API for receiving referee signals and commands from both a human referee and AutoReferee
+        \item Robot control using \ac{ros2} Humble which handles:
         \begin{itemize}
             \item Path planning
-            \item Enable robot to shot ball towards commanded target
+            \item Angling robot correctly to be able to shot ball towards commanded target
         \end{itemize}
-        \item Centralised strategy planner using \ac{ai}
-        \item Peer to peer communication using Protobuf and \ac{ros2} Humble
+        \item A centralised strategy planner using \ac{ai} which sends commands to the individual robots, informing them what they should do
+        \item Peer to peer communication using Protobuf and \ac{ros2} Humble for communication between the individual robots and the centralised computes
     \end{itemize}
     \item Hardware
     \begin{itemize}
-        \item One deployable \ac{ssl}-RoboCup compliant robot adhering to Swedish laws and standards.
+        \item One deployable \ac{ssl}-RoboCup compliant robot adhering to Swedish laws and standards
         \item Base design
-        \item Motor control
-        \item Kicker control
+        \begin{itemize}
+            \item 3D-\acs{cad} design and printing of chassi
+            \item 3D-\acs{cad} design and printing of wheels
+        \end{itemize}
+        \item Circuit design for:
+        \begin{itemize}
+            \item Powertrain
+            \begin{itemize}
+                \item Motors
+                \item \ac{esc}
+                \item Battery
+            \end{itemize}
+            \item Kicker
+            \item Dribbler
+            \item Sensors
+        \end{itemize}
+        \item Modular design allowing for:
+        \begin{itemize}
+            \item Swapping battery
+            \item Swapping motor
+            \item Swapping kicker
+        \end{itemize}
     \end{itemize}
 \end{itemize}   
-Additionally, see the \ac{wbs} available on the project \href{https://github.com/DVA490-474-Project-Course/DVA490_474_PRO1/blob/main/images/WBS.png}{GitHub}\footnote{https://github.com/DVA490-474-Project-Course/DVA490\_474\_PRO1/blob/main/images/WBS.png}.
+Additionally, see the \ac{wbs} available on the projects \href{https://github.com/DVA490-474-Project-Course/DVA490_474_PRO1/blob/main/images/WBS_updated.png}{GitHub}\footnote{https://github.com/DVA490-474-Project-Course/DVA490\_474\_PRO1/blob/main/images/WBS\_updated.png} page.
 
 %-------------------------------------------------------------------------------
 

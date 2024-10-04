@@ -6,6 +6,7 @@ Requirements are necessary to establish in order to ensure that a satisfactory p
 
 %===============================================================================
 \subsection{Product requirements}
+\label{subsection:product_requirements}
 
 The following will describe the features, functionality and specifications which the final product must have.
 
@@ -24,32 +25,28 @@ The following functional requirements were established:
         \item Pass the ball towards designated robot
         \item Block ball
         \item Move to designated target
-        \item Omnidiretional (holonomic) movement
+        \item Omnidirectional (holonomic) movement
         \item Not crash into other robots
         \begin{itemize}
-            \item Unless it is an attempt at trying to steal the ball from an opponent or to prevent opponents from scoring a goal
+            \item Except if it is an attempt at trying to steal the ball from an opponent or to prevent opponents from scoring a goal
             \item Never acceptable if it causes any permanent damage on either robot
         \end{itemize}
         \item Not crash into the arena
         \item React accordingly to referee signals
         \item Send robot status information
+        \item Hot-swap battery. The battery should be swappable by plugin in the robot to an alternative source and then changing the battery.
+        \item Continuously monitor the capacity of the battery.
+        \item Continuously monitor the temperature of the \ac{mcu}.
     \end{itemize}
     \item Centralised strategic planner
     \begin{itemize}
         \item \ac{ai} functionality
-        \item Switch playing half on demand
+        \item Swap field sides on demand
         \item Ensure actions for each robot is not taken from an individualistic point of view, but from a overarching team perspective with a strategic plan aimed at obtaining victory
     \end{itemize}
     \item Simulation interface
     \begin{itemize}
         \item Send packages containing robot commands to grSim
-    \end{itemize}
-    \item Hardware interface
-    \begin{itemize}
-        \item Control wheel motors
-        \item Control kicker
-        \item Provide sensor data
-        \item Provide robot status information
     \end{itemize}
     \item SSL interface
     \begin{itemize}
@@ -62,8 +59,16 @@ The following functional requirements were established:
     \end{itemize}
     \item Communication protocol
     \begin{itemize}
+        \item Wireless
         \item Be peer to peer
         \item Ability to select between two carrier frequencies
+    \end{itemize}
+    \item Hardware interface
+    \begin{itemize}
+        \item Control wheel motors
+        \item Control kicker
+        \item Provide sensor data
+        \item Provide robot status information
     \end{itemize}
 \end{enumerate}
 
@@ -76,16 +81,60 @@ The following functional requirements were established:
 
 The following non-functional requirements were established:
 \begin{enumerate}
-    \item Simulate 12 robots.
-    \item Comply with all \ac{ssl}-RoboCup rules, see\:\cite{noauthor_rules_2024}.
-    \item A latency lower than $400\:\text{ms}$ from any point in time at which the centralised strategy planner gives a command until it starts executing on the robot.
-    \item The robot must have four wheels.
+    % Individual robot behaviour
+    % Collective robot behaviour
     \item The centralised strategy planner must run on a central computer.
+    \begin{itemize}
+        \item A latency lower than $400\:\text{ms}$ from any point in time at which the centralised strategy planner gives a command until it starts executing on the robot.
+    \end{itemize}
+    % Simulation
+    \item Be able to simulate 12 robots.
+    % Simulation interface
+    % SSL interface
+    % Communication
     \item Communication protocol
     \begin{itemize}
+        \item Use WiFi
         \item Use Protobuf
         \item Use \ac{ros2} Humble
+        \item $5\%$ dataloss or less
     \end{itemize}
+    % Hardware
+    \item Each robot must have a reverse polarity protection circuit that changes polarity when the battery is connected incorrectly.
+    \item Each robot must have a TVS-diode for over-voltage protection.
+    % Wheels
+    \item The robot must have four Swedish wheels.
+    \item Maximum diameter of each wheel must be $70\:\text{mm}$.
+    % Motor
+    \item The size of each wheel motor has to be $43\:\text{mm}$ in diameter and $30\:\text{mm}$ in length.
+    \item The weight of each motor for the wheels must be less than $200\:\text{g}$.
+    \item The voltage of each motor should be capable to handle $24\:\text{V}$ ($6\:\text{S}$ battery).
+    % Motor driver
+    \item Each motor driver must have work with an input voltage of $24\:\text{V}$ ($6\:\text{S}$ battery).
+    \item The weight of each motor driver must be less than $200\:\text{g}$.
+    % Dribbler
+    \item Minimum \ac{rpm} for the dribbler motor is $10000\:\text{\ac{rpm}}$.
+    \item Maximum length of the dribbler motor is $70\:\text{mm}$, excluding the mounting axles.
+    % Kicker
+    \item The solenoid (kicker) should be capable of launching the ball at a speed of at least $2\:\text{m/s}$.
+    \item The solenoid should be capable of handling a voltage of at least $100\:\text{V}$. 
+    % Battery
+    \item The voltage of the battery in each robot must be $6\:\text{S}$ ($24\:\text{V}$ nominal).
+    \item The robot should have battery capacity to continuously operate for $30\:\text{min}$.
+    % Sensors
+    \item For the break beam sensor detecting if the ball is close to the dribbler the beam cannot be smaller than $3\:\text{mm}$ in diameter.
+    % Robot
+    \item The robot must fit inside a $180\:\text{mm}$diameter wide and $150\:\text{mm}$ tall cylinder.
+    \item Maximum weight of the robot is $5\:\text{kg}$.
+    \item The angle between the front wheels is $120\degree$ and between the back wheels the angle is $90\degree$.
+    \item Minimum height of the middle plate is $80\:\text{mm}$.
+    \item Screws with a uniform diameter should be used, with a minimum size of M3.
+    %
+    \item The robots \ac{mcu} must process input from sensors and control the motors in less than $40\:\text{ms}$.
+    % SSL rules
+    \item Comply with all \ac{ssl}-RoboCup rules, see\:\cite{noauthor_rules_2024}.
+    \item The vision pattern on the robot must follow the \ac{ssl} rules and fit on the top plate.
+    \item The colour markings on top of the robot must comply with \ac{ssl} rules.
 \end{enumerate}
 
 %-------------------------------------------------------------------------------

@@ -1,4 +1,3 @@
-\newpage
 %===============================================================================
 \section{Risk analysis and response planning}
 \label{section:risk_analysis_and_response_planning}
@@ -9,18 +8,54 @@ A table was created with the following attributes:
     \item Potential risk: short description of a potential risk. (Only those which were deemed to have a notable impact will be covered).
     \item Probability: score from $1\text{-}5$, with $1$ being very unlikely, and $5$ being very likely.
     \item Impact: score from $1\text{-}5$, with $1$ having a very small impact, and $5$ having a very large impact.
-    \item Risk score: score from $1\text{-}25$, with $1$ being a low priority risk, and $25$ being a critical priority risk.
+    \item Risk score: calculated according to: $\text{Probability} \times \text{Impact}$. Score from $1\text{-}25$, with $1$ being a low priority risk, and $25$ being a critical priority risk.
     \item Strategy: which strategy is to be used to deal with the risk. There are four possible: accept, transfer, ignore, mitigate.
     \item Mitigation action: what the mitigation action entails.
 \end{itemize}
 The table can be seen in Table.\:\ref{tab:risk_response}.
 
-\begin{table}
+\begin{table}[H]
     \centering
-    \resizebox{\columnwidth}{!}{\noindent\begin{tabular}{|c|c|c|c|c|c|} \hline
+    \begin{tabularx}{\textwidth}{|X|c|c|c|X|X|} \hline
          \textbf{Potential risk}                            & \textbf{Probability}  & \textbf{Impact}   & \textbf{Risk score}   & \textbf{Strategy}     & \textbf{Mitigation action} \\ \hline
          Simulation differing substantially from reality    & 3                     & 3                 & 9                     & Accept                & N/A \\ \hline
-    \end{tabular}}
+         Reversed polarity when plugging in the battery & 3 & 5 & 15 & Mitigate & Reverse polarity protection circuit \\ \hline
+         Misunderstanding between hardware and software input/output values & 2 & 5 & 10 & Mitigate & Communicate between the hardware and software teams \\ \hline
+         Ordered components not arriving on time & 3 & 4 & 12 & Accept & N/A \\ \hline
+         Components breaking/burning up & 4 & 5 & 20 & Mitigate & Order redundant components where it makes sense and over-dimension so that the components maximum voltage level far exceeds the operational voltage.\\ \hline
+         Robot excessively shaking & 2 & 5 & 10 & Mitigate & Increasing the amount of mini wheels on the wheels \\ \hline
+         Dribbler bar breaking & 2 & 3 & 6 & Mitigate & Make out of a solid material \\ \hline
+         Dribbler unable to induce enough rotation on the ball & 2 & 3 & 6 & Mitigate & Powerful motor and high grip material \\ \hline
+         Ball bouncing away instead of being caught in the rotation & 4 & 3 & 16 & Mitigate & Design dribbler assembly in a way that reduces bouncing \\ \hline
+         Electrocution injury & 2 & 4 & 8 & Mitigate & Take proper precautions, use protective gear, and rethink the action before performing \\ \hline
+         Hardware components are not equal to those used by our collaborators & 5 & 2 & 10 & Mitigate & Have a continuous dialog with our collaborators as to minimise misunderstandings \\ \hline
+         Project duration is not enough to complete the original plan & 3 & 3 & 9 & Mitigate & Plan reasonably, continuously following up on progress made, not an too ambitious initial goal \\ \hline
+         Team members are unwell(sick) & 4 & 3  & 12 & Accept & N/A \\ \hline
+         Miscommunication in the collaboration & 4 & 3 & 10 & Mitigate  & Use clear communication channels, define roles and responsibilities, document key decisions and set regular check-ins. \\ \hline
+         Simulation differing substantially from reality & 3 & 3 & 9 & Accept & N/A \\ \hline
+         Reversed polarity when plugging in the battery & 3 & 5 & 15 & Mitigate & Reverse polarity protection circuit \\ \hline
+         Misunderstanding between hardware and software input/output values & 2 & 5 & 10 & Mitigate & Communicate between the hardware and software teams \\ \hline
+         Ordered components not arriving on time & 3 & 4 & 12 & Accept & N/A \\ \hline
+         Components breaking/burning up & 4 & 5 & 20 & Mitigate & Order redundant components where it makes sense and over-dimension so that the components maximum voltage level far exceeds the operational voltage. \\ \hline
+         Robot excessively shaking & 2 & 5 & 10 & Mitigate & Increase the number of mini wheels on the wheels \\ \hline
+         Dribbler bar breaking & 2 & 3 & 6 & Mitigate & Make out of a solid material \\ \hline
+         Dribbler unable to induce enough rotation on the ball & 2 & 3 & 6 & Mitigate & Use a powerful motor and high grip material \\ \hline
+         Ball bouncing away instead of being caught in the rotation & 4 & 3 & 16 & Mitigate & Design dribbler assembly in a way that reduces bouncing \\ \hline
+         Electrocution injury & 2 & 4 & 8 & Mitigate & Take proper precautions, use protective gear, and rethink the action before performing \\ \hline
+         Hardware components are not equal to those used by our collaborators & 5 & 2 & 10 & Mitigate & Have a continuous dialog with our collaborators to minimise misunderstandings \\ \hline
+         Project duration is not enough to complete the original plan & 3 & 3 & 9 & Mitigate & Plan reasonably, continuously follow up on progress made, and set realistic goals \\ \hline
+         Team members are unwell (sick) & 4 & 3 & 10 & Accept & N/A \\ \hline
+         Misunderstanding between team members & 4 & 3 & 10 & Accept & N/A \\ \hline
+         Power supply or battery failure & 3 & 4 & 12 & Mitigate & Implement redundant power supplies and use a reliable battery management system (BMS). Test battery performance under load to identify potential failures early. \\ \hline
+         Software bugs causing unexpected robot behaviour & 3 & 5 & 15 & Mitigate & Implement thorough software testing and continuous integration, including unit tests, hardware-in-the-loop (HIL) testing, and simulation. \\ \hline
+         Mechanical misalignment or interference between components & 2 & 4 & 8 & Mitigate & Use precise manufacturing techniques and perform tolerance checks during assembly. Maintain a detailed CAD model to predict issues. \\ \hline
+         Network connectivity issues between robots or with the main controller & 3 & 4 & 12 & Mitigate & Implement a robust communication protocol with redundancy and conduct extensive testing in environments with potential interference. \\ \hline
+         Difficulty in achieving real-time response due to computational limitations & 4 & 4 & 16 & Mitigate & Optimise code for performance, offload computationally heavy tasks to specialised hardware, and monitor performance metrics. \\ \hline
+         Safety hazards from high-speed movement of robots & 3 & 4 & 12 & Mitigate & Establish a safe testing environment, use speed limiters during testing, and enforce safety protocols. Use emergency stop functionality in the system. \\ \hline
+         Inconsistent performance in different environmental conditions (e.g., different flooring types, lighting conditions) & 2 & 5 & 10 & Mitigate & Conduct testing in various environments to fine-tune sensor configurations and control parameters. \\ \hline
+         Software-hardware integration issues due to different update cycles & 3 & 4 & 12 & Mitigate & Maintain version control, ensure all subsystems are compatible, and establish regular integration meetings for synchronisation. \\ \hline
+         Changes in competition rules or specifications during development & 2 & 5 & 10 & Mitigate & Monitor rule updates, keep designs flexible, and allocate resources for rapid changes when required. \\ \hline
+    \end{tabularx}
     \caption{The risks, their probability, impact, risk score and the planned responses.}
     \label{tab:risk_response}
 \end{table}

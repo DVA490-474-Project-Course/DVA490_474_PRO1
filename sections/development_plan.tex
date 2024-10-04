@@ -1,4 +1,3 @@
-\newpage
 %===============================================================================
 \section{Development Plan}
 \label{section:development_plan}
@@ -13,7 +12,7 @@ This development plan details the development process for the project, and conta
 %===============================================================================
 \subsection{Development Methodology}
 
-The project team will follow a makeshift model which is akin to the waterfall model because of the time limit placed on the project. This time limit makes it unfeasible for the team to learn a new system, thus defaulting to having a work structure which is similar to the commonly known waterfall model.
+The project follows no defined development methodology. Team members are divided into teams and follow the schedule (see Fig.\:\ref{fig:project_schedule}) for the task assigned to them until it is complete. Communication and meetings occur whenever any project member deems it necessary.
 
 %------------------------------------------------------------------------------
 
@@ -52,6 +51,10 @@ The \ac{os} that are going to be used are:
     \item \href{https://www.microsoft.com/en-us/download/windows}{Microsoft Windows}: Windows will be used by hardware team members for general use. Versions:
     \begin{itemize}
         \item 22H2 (\ac{os} Build 19045.4894)
+    \end{itemize}
+    \item \href{https://archlinux.org/}{Arch Linux}: Arch linux will be used by one hardware developer for general use. Kernel version:
+    \begin{itemize}
+        \item 6.11.1-arch1-1
     \end{itemize}
 \end{itemize}
 
@@ -186,7 +189,7 @@ The project will use the version control tool Git to manage changes, versions, h
 Software testing and quality assurance will be done using GoogleTest. Unit tests will be created for every developed function. Integration tests will additionally be created for every module and sub module. All tests are to be run before committing a new feature or change to GitHub.
 
 % Hardware
-Standardised tests for the hardware will be used to calibrate sensors and verify that they behave according to the specifications in the data sheet. These tests should be done every time the robot is used. The hardware interface will use GoogleTest for testing and quality assurance. Unit tests will be created for every developed function.
+Standardised tests for the hardware will be used to calibrate sensors and verify that they behave according to the specifications in the data sheet. These tests should be done every time the robot is used.
 
 %------------------------------------------------------------------------------
 
