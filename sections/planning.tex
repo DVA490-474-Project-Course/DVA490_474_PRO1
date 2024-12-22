@@ -1,0 +1,307 @@
+%===============================================================================
+\section{Planning}
+\label{section:planning}
+
+The project plan is presented in this section. It will provide an overview of the work in the project, including the timeline and timeframe for all the parts of the project.
+
+%===============================================================================
+\subsection{Milestone plan}
+
+% What a milestone plan is
+A milestone plan provides an overview of the projects most important milestones\:\cite{tonnquist_project_2021}.
+% Milestone plan
+See Fig.\:\ref{fig:mile_stone} in Appendix\:\ref{appendix:milestone_plan} for the milestone plan of the project.
+
+%-------------------------------------------------------------------------------
+
+%\helper{Stakeholders may want an overarching flow chart or table of the project’s most important milestones as a indicator if the project is falling behind.}
+
+%===============================================================================
+\subsection{Work breakdown structure}
+
+% What a WBS is
+A \ac{wbs} gives a hierarchical view of the different work parts which are part of the projects scope\:\cite{tonnquist_project_2021}.
+% WBS
+The \ac{wbs} for this project is shown in Table.\:\ref{tab:wbs}.
+
+\begin{longtable}{|c|c|m{0.7\textwidth}|}
+    % Caption and label
+    \caption{The \ac{wbs} for the project.} \label{tab:wbs} \\
+    \hline
+    % Fix header
+    \textbf{ID} & \textbf{Work Class} & \textbf{Name (Work entailed)} \\ \hline
+    \endfirsthead
+    % Fix next page headers
+    \multicolumn{3}{|c|}{\textit{Continued from previous page}} \\ \hline
+    \textbf{ID} & \textbf{Work Class} & \textbf{Name (Work entailed)} \\ \hline
+    \endhead
+    \hline
+    \endfoot
+    \hline
+    \hline
+    \endlastfoot
+%-------------------------------------------------------------------------------
+    \rowcolor{root} - & Root & Multi-robot Soccer - RoboCup \\ \hline
+    %--------------------
+    % Software
+    %--------------------
+    \rowcolor{c1} 1 & Category & Software \\ \hline
+    \rowcolor{c1-wp} 1.1 & Work Package & Simulate 12 robots \\ \hline
+    \rowcolor{c1-d} 1.1.1 & Deliverable & Setup grSim \\ \hline
+    \rowcolor{c1-t} 1.1.1.1 & Task & Download grSim \\ \hline
+    \rowcolor{c1-t} 1.1.1.2 & Task & Run the simulation correctly \\ \hline
+    \rowcolor{c1-wp} 1.1.2 & Work Package & Simulation interface (\acs{api}) \\ \hline
+    \rowcolor{c1-d} 1.1.2.1 & Deliverable & Integrate Protobuf \\ \hline
+    \rowcolor{c1-d} 1.1.2.2 & Deliverable & Move a single robot \\ \hline
+    \rowcolor{c1-d} 1.1.2.3 & Deliverable & Activate kicker on a single robot \\ \hline
+    \rowcolor{c1-d} 1.1.2.4 & Deliverable & Activate dribbler on a single robot \\ \hline
+    \rowcolor{c1-d} 1.1.2.5 & Deliverable & Execute any desired control over any chosen robot in grSim \\ \hline
+    \rowcolor{c1-wp} 1.2 & Work Package & \acs{ssl} interface (\acs{api}) \\ \hline
+    \rowcolor{c1-d} 1.2.1 & Deliverable & Integrate ssl-vision \\ \hline
+    \rowcolor{c1-t} 1.2.1.1 & Task & Receive single package containing positional data \\ \hline
+    \rowcolor{c1-t} 1.2.1.2 & Task & Receive continuous positional data \\ \hline
+    \rowcolor{c1-d} 1.2.2 & Deliverable & Integrate ssl-game-controller (human referee and optional auto referee) \\ \hline
+    \rowcolor{c1-t} 1.2.2.1 & Task & Receive a single package containing referee commands/signals \\ \hline
+    \rowcolor{c1-t} 1.2.2.2 & Task & Receive continuous stream of referee commands/signals \\ \hline
+    \rowcolor{c1-t} 1.2.2.3 & Task & Integrate AutoReferee \\ \hline
+    \rowcolor{c1-d} 1.2.3 & Deliverable & Develop an automatic game controller (will be used when training the \acs{ai}) \\ \hline
+    \rowcolor{c1-t} 1.2.3.1 & Task & Research and obtain proper understanding of \acs{ssl}-rules \\ \hline
+    \rowcolor{c1-t} 1.2.3.2 & Task & Implement the automatic game controller system \\ \hline
+    \rowcolor{c1-wp} 1.3 & Work Package & Hardware interface (\acs{api}) \\ \hline
+    \rowcolor{c1-d} 1.3.1 & Deliverable & Basestation communication\\ \hline
+    \rowcolor{c1-t} 1.3.1.1 & Task & Configure basestation RF communication\\ \hline
+    \rowcolor{c1-d} 1.3.2 & Deliverable & Wheel motor interface \\ \hline
+    \rowcolor{c1-t} 1.3.2.1 & Task & Establish communication using \acs{uart} \\ \hline
+    \rowcolor{c1-t} 1.3.2.2 & Task & Implement \acs{foc} \\ \hline
+    \rowcolor{c1-t} 1.3.2.3 & Task & Implement a velocity distributor (subscribing to cmd\_vel) \\ \hline
+    \rowcolor{c1-d} 1.3.3 & Deliverable & Kicker interface \\ \hline
+    \rowcolor{c1-t} 1.3.3.1 & Task & \acs{gpio} implement activation \\ \hline
+    \rowcolor{c1-d} 1.3.4 & Deliverable & Dribbler interface \\ \hline
+    \rowcolor{c1-t} 1.3.4.1 & Task & Implement \acs{pwm} control \\ \hline
+    \rowcolor{c1-wp} 1.3.5 & Work Package & Sensor interface \\ \hline
+    \rowcolor{c1-d} 1.3.5.1 & Deliverable & \acs{imu} \\ \hline
+    \rowcolor{c1-t} 1.3.5.1.1 & Task & \acs{spi} implementation \\ \hline
+    \rowcolor{c1-t} 1.3.5.1.2 & Task & \acs{i2c} implementation \\ \hline
+    \rowcolor{c1-d} 1.3.5.2 & Deliverable & Wheel encoders \\ \hline
+    \rowcolor{c1-t} 1.3.5.2.1 & Task & Configure wheel encoders \\ \hline
+    \rowcolor{c1-d} 1.3.5.3 & Deliverable & Camera \\ \hline
+    \rowcolor{c1-d} 1.3.5.4 & Deliverable & \acs{lidar} \\ \hline
+    \rowcolor{c1-t} 1.3.5.4.1 & Task & \acs{i2c} implementation \\ \hline
+    \rowcolor{c1-d} 1.3.5.5 & Deliverable & RGB sensor \\ \hline
+    \rowcolor{c1-t} 1.3.5.5.1 & Task & \acs{i2c} implementation \\ \hline
+    \rowcolor{c1-d} 1.3.6 & Deliverable & Provide robot status information \\ \hline
+    \rowcolor{c1-t} 1.3.6.1 & Task & \acs{cpu} temperature \\ \hline
+    \rowcolor{c1-t} 1.3.6.2 & Task & Battery charge \\ \hline
+    \rowcolor{c1-d} 1.3.7 & Deliverable & Establish communication between Raspberry Pi and Nucleo 144 \\ \hline
+    \rowcolor{c1-t} 1.3.7.1 & Task & Install micro-\acs{ros} on Raspberry Pi and Nucleo 144 (\acs{uart}) \\ \hline
+    \rowcolor{c1-t} 1.3.7.2 & Task & Implement \acs{ros} functionality \\ \hline
+    \rowcolor{c1-d} 1.3.8 & Deliverable & Establish communication between Nucleo 144 and motor drivers \\ \hline
+    \rowcolor{c1-t} 1.3.8.1 & Task & Communicating using \acs{uart} \\ \hline
+    \rowcolor{c1-wp} 1.4 & Work Package & Communication protocol (\acs{api}) \\ \hline
+    \rowcolor{c1-d} 1.4.1 & Deliverable & Establish communication between \acs{pc} and Raspberry Pi \\ \hline
+    \rowcolor{c1-t} 1.4.1.1 & Task & Using Wi-Fi \\ \hline
+    \rowcolor{c1-d} 1.4.2 & Deliverable & Integrate Protobuf \\ \hline
+    \rowcolor{c1-d} 1.4.3 & Deliverable & Utilizing \acs{ros2} \\ \hline
+    \rowcolor{c1-d} 1.4.4 & Deliverable & Ability to switch between two carrier frequencies \\ \hline
+    \rowcolor{c1-wp} 1.5 & Work Package & Individual robot behaviour (finding the best way to do the things it has been commanded to do) \\ \hline
+    \rowcolor{c1-d} 1.5.1 & Deliverable & Research viable path planning algorithms \\ \hline
+    \rowcolor{c1-d} 1.5.2 & Deliverable & Integrate \acs{ros2} \\ \hline
+    \rowcolor{c1-t} 1.5.2.1 & Task & Getting sensor data \\ \hline
+    \rowcolor{c1-t} 1.5.2.2 & Task & Getting odometry data \\ \hline
+    \rowcolor{c1-d} 1.5.3 & Deliverable & Develop path planning algorithm \\ \hline
+    \rowcolor{c1-t} 1.5.3.1 & Task & Build using nav2 \\ \hline
+    \rowcolor{c1-d} 1.5.4 & Deliverable & Implement robot ability to shoot \\ \hline
+    \rowcolor{c1-t} 1.5.4.1 & Task & Angle correctly towards target \\ \hline
+    \rowcolor{c1-t} 1.5.4.2 & Task & Shoot towards target \\ \hline
+    \rowcolor{c1-d} 1.5.5 & Deliverable & nav2 stack configuration \\ \hline
+    \rowcolor{c1-t} 1.5.5.1 & Task & Create nav2 parameter files \\ \hline
+    \rowcolor{c1-t} 1.5.5.2 & Task & Create nav2 launch files \\ \hline
+    \rowcolor{c1-wp} 1.5.6 & Work Package & Develop supporting functions \\ \hline
+    \rowcolor{c1-d} 1.5.6.1 & Deliverable & Run Simulation/Hardware interface \\ \hline
+    \rowcolor{c1-t} 1.5.6.1.1 & Task & Run and call on Simulation interface \\ \hline
+    \rowcolor{c1-t} 1.5.6.1.2 & Task & Run and call on Hardware interface \\ \hline
+    \rowcolor{c1-d} 1.5.6.2 & Deliverable & Ability to send data \\ \hline
+    \rowcolor{c1-t} 1.5.6.2.1 & Task & Sending robot status (\acs{cpu} temperature and battery charge) \\ \hline
+    \rowcolor{c1-t} 1.5.6.2.2 & Task & Sending acknowledgements that commanded task has been completed \\ \hline
+    \rowcolor{c1-d} 1.5.6.3 & Deliverable & Ability to receive data \\ \hline
+    \rowcolor{c1-t} 1.5.6.3.1 & Task & Ability to receive initialization data (ID, home playing side, starting pose) \\ \hline
+    \rowcolor{c1-t}1.5.6.3.2 & Task & Ability to receive control commands from collective robot behaviour \\ \hline
+    \rowcolor{c1-t} 1.5.6.3.3 & Task & Ability to receive pose correction data from collective robot behaviour \\ \hline
+    \rowcolor{c1-d} 1.5.6.4 & Deliverable & Initialize the robot \\ \hline
+    \rowcolor{c1-t} 1.5.6.4.1 & Task & Getting robot ID \\ \hline
+    \rowcolor{c1-t} 1.5.6.4.2 & Task & Obtaining information about which playing side of the field is friendly \\ \hline
+    \rowcolor{c1-t} 1.5.6.4.3 & Task & Getting the start pose \\ \hline
+    \rowcolor{c1-wp} 1.5.7 & Work Package & Computer vision \\ \hline
+    \rowcolor{c1-d} 1.5.7.1 & Deliverable & Research object recognition \\ \hline
+    \rowcolor{c1-d} 1.5.7.2 & Deliverable & Develop object recognition \\ \hline
+    \rowcolor{c1-t} 1.5.7.2.1 & Task & Develop interest point computation algorithm \\ \hline
+    \rowcolor{c1-t} 1.5.7.2.2 & Task & Develop descriptor computation algorithm \\ \hline
+    \rowcolor{c1-t} 1.5.7.2.3 & Task & Develop geometric verification algorithm \\ \hline
+    \rowcolor{c1-wp} 1.6 & Work Package & Collective robot behaviour/ Centralised strategy planner (Handles what each individual robot should do to obtain a win for the team) \\ \hline
+    \rowcolor{c1-d} 1.6.1 & Deliverable & Research \acs{ai}-algorithms \\ \hline
+    \rowcolor{c1-t} 1.6.1.1 & Task & Outline actions \\ \hline
+    \rowcolor{c1-t} 1.6.1.2 & Task & Outline world representation (input) \\ \hline
+    \rowcolor{c1-d} 1.6.2 & Deliverable & Develop \acs{ai} for strategy planning \\ \hline
+    \rowcolor{c1-t} 1.6.2.1 & Task & Develop the \acs{ai}-algorithm \\ \hline
+    \rowcolor{c1-t} 1.6.2.2 & Task & Train the \acs{ai}-algorithm \\ \hline
+    \rowcolor{c1-d} 1.6.3 & Deliverable & Be able to send data \\ \hline
+    \rowcolor{c1-t} 1.6.3.1 & Task & Be able to send control commands to robots in simulation \\ \hline
+    \rowcolor{c1-t} 1.6.3.2 & Task & Provide initialization data to all robots \\ \hline
+    \rowcolor{c1-t} 1.6.3.3 & Task & Be able to send control commands to robots \\ \hline
+    \rowcolor{c1-t} 1.6.3.4 & Task & Be able to send pose correction data to robots \\ \hline
+    \rowcolor{c1-d} 1.6.4 & Deliverable & Be able to receive data \\ \hline
+    \rowcolor{c1-t} 1.6.4.1 & Task & Be able to receive robot status information \\ \hline
+    \rowcolor{c1-t} 1.6.4.2 & Task & Be able to receive referee commands and signals from \acs{ssl} interface \\ \hline
+    \rowcolor{c1-t} 1.6.4.3 & Task & Be able to receive pose data from \acs{ssl} interface \\ \hline
+    \rowcolor{c1-d} 1.6.5 & Deliverable & Ability to switch playing half on demand \\ \hline
+    %--------------------
+    % Hardware
+    %--------------------
+    \rowcolor{c2} 2 & Category & Hardware \\ \hline
+    \rowcolor{c2-wp} 2.1 & Work Package & Base design \\ \hline
+    \rowcolor{c2-d} 2.1.1 & Deliverable & Hardware design to meet \acs{ssl}-rules \\ \hline
+    \rowcolor{c2-t} 2.1.1.1 & Task & Research for chassis design \\ \hline
+    \rowcolor{c2-t} 2.1.1.2 & Task & Chassis \acs{bom}\\ \hline
+    \rowcolor{c2-t} 2.1.1.3 & Task & Powertrain \acs{bom} \\ \hline
+    \rowcolor{c2-t} 2.1.1.4 & Task & Sensor \acs{bom} \\ \hline
+    \rowcolor{c2-t} 2.1.1.5 & Task & Kicker \acs{bom} \\ \hline
+    \rowcolor{c2-d} 2.1.2 & Deliverable & Design modular components \\ \hline
+    \rowcolor{c2-t} 2.1.2.1 & Task & Allow for battery swap \\ \hline
+    \rowcolor{c2-t} 2.1.2.2 & Task & Allow for motor swap \\ \hline
+    \rowcolor{c2-wp} 2.1.3 & Work Package & 3D-design \\ \hline
+    \rowcolor{c2-d} 2.1.3.1 & Deliverable & Chassis design \\ \hline
+    \rowcolor{c2-d} 2.1.3.2 & Deliverable & Wheel design \\ \hline
+    \rowcolor{c2-t} 2.1.3.2.1 & Task & Wheel hub design \\ \hline
+    \rowcolor{c2-t} 2.1.3.2.1 & Task & Subwheel design \\ \hline
+    \rowcolor{c2-d} 2.1.3.3 & Deliverable & Dribbler design \\ \hline
+    \rowcolor{c2-d} 2.1.3.4 & Deliverable & Kicker assembly design \\ \hline
+    \rowcolor{c2-d} 2.1.3.5 & Deliverable & Mounting design \\ \hline
+    \rowcolor{c2-t} 2.1.3.5.1 & Task & Encoder mount \\ \hline
+    \rowcolor{c2-t} 2.1.3.5.2 & Task & Motor mount \\ \hline
+    \rowcolor{c2-t} 2.1.3.5.3 & Task & Battery mount \\ \hline
+    \rowcolor{c2-t} 2.1.3.5.4 & Task & Dribbler mount \\ \hline
+    \rowcolor{c2-wp} 2.1.4 & Work Package & Circuit design and integration \\ \hline
+    \rowcolor{c2-d} 2.1.4.1 & Deliverable & Design powertrain circuit \\ \hline
+    \rowcolor{c2-d} 2.1.4.2 & Deliverable & Design kicker circuit \\ \hline
+    \rowcolor{c2-d} 2.1.4.3 & Deliverable & Design dribbler circuit \\ \hline
+    \rowcolor{c2-d} 2.1.4.4 & Deliverable & Design microcontroller circuit \\ \hline
+    \rowcolor{c2-d} 2.1.4.5 & Deliverable & Design \acs{ic} for sensors \\ \hline
+    \rowcolor{c2-t} 2.1.4.5.1 & Task & Design \acs{imu} \acs{ic} \\ \hline
+    \rowcolor{c2-t} 2.1.4.5.2 & Task & Design wheel encoder \acs{ic} \\ \hline
+    \rowcolor{c2-t} 2.1.4.5.3 & Task & Design break beam \acs{ic} \\ \hline
+    \rowcolor{c2-d} 2.1.4.6 & Deliverable & Integrate the circuits \\ \hline
+    \rowcolor{c2-d} 2.1.4.7 & Deliverable & Design mainboard \acs{pcb} \\ \hline
+    \rowcolor{c2-d} 2.1.4.8 & Deliverable & Design carrier \acs{pcb} for motor driver\\ \hline
+    \rowcolor{c2-d} 2.1.4.9 & Deliverable & Design kicker \acs{pcb} \\ \hline
+    \rowcolor{c2-d} 2.1.4.10 & Deliverable & Design basestation \acs{pcb} \\ \hline
+    \rowcolor{c2-wp} 2.2 & Work Package & Manufacturing \\ \hline
+    \rowcolor{c2-d} 2.2.1 & Deliverable & Manufacture \acs{pcb} \\ \hline
+    \rowcolor{c2-t} 2.2.1.1 & Task & Mainboard \\ \hline
+    \rowcolor{c2-t} 2.2.1.2 & Task & Basestation \\ \hline
+    \rowcolor{c2-t} 2.2.1.3 & Task & Kicker board \\ \hline
+    \rowcolor{c2-t} 2.2.1.4 & Task & Motor driver carrier board \\ \hline
+    \rowcolor{c2-d} 2.2.2 & Deliverable & Manufacture 3D-designed items \\ \hline
+    \rowcolor{c2-t} 2.2.2.1 & Task & Manufacture chassis \\ \hline
+    \rowcolor{c2-t} 2.2.2.2 & Task & Manufacture wheels \\ \hline
+    \rowcolor{c2-t} 2.2.2.3 & Task & Manufacture dribbler \\ \hline
+    \rowcolor{c2-t} 2.2.2.4 & Task & Manufacture kicker assembly \\ \hline
+    \rowcolor{c2-t} 2.2.2.5 & Task & Manufacture mountings \\ \hline
+    \rowcolor{c2-wp} 2.3 & Work Package & Testing \\ \hline
+    \rowcolor{c2-d} 2.3.1 & Deliverable & Test motors \\ \hline
+    \rowcolor{c2-d} 2.3.2 & Deliverable & Test kicker \\ \hline
+    \rowcolor{c2-d} 2.3.3 & Deliverable & Test dribbler \\ \hline
+    \rowcolor{c2-d} 2.3.4 & Deliverable & Test sensors \\ \hline
+    \rowcolor{c2-t} 2.3.4.1 & Task & Test \acs{imu} \\ \hline
+    \rowcolor{c2-t} 2.3.4.2 & Task & Test wheel encoders \\ \hline
+    \rowcolor{c2-t} 2.3.4.3 & Task & Test camera \\ \hline
+    \rowcolor{c2-t} 2.3.4.4 & Task & Test \acs{lidar} \\ \hline
+    \rowcolor{c2-t} 2.3.4.5 & Task & Test RGB sensor \\ \hline
+    \rowcolor{c2-d} 2.3.5 & Deliverable & Validate the integrated circuits \\ \hline
+    \rowcolor{c2-t} 2.3.5.1 & Task & Battery works correctly \\ \hline
+    \rowcolor{c2-t} 2.3.5.2 & Task & \acs{ssl}-rule compliance \\ \hline
+    %--------------------
+    % HIL
+    %--------------------
+    \rowcolor{c3} 3 & Category & \acs{hil} \\ \hline
+    \rowcolor{c3-wp} 3.1 & Work Package & Develop \acs{hil} \\ \hline
+    \rowcolor{c3-d} 3.1.1 & Deliverable & Design a system to integrate hardware in simulation \\ \hline
+    \rowcolor{c3-d} 3.1.2 & Deliverable & Test the \acs{hil} in simulation \\ \hline
+    \rowcolor{c3-d} 3.1.3 & Deliverable & Ensure a smooth transition from simulation to physical robot hardware \\ \hline
+    \rowcolor{c3-wp} 3.2 & Work Package & Validate hardware platform \\ \hline
+    \rowcolor{c3-d} 3.2.1 & Deliverable & Conduct \acs{hil} test to validate the performance \\ \hline
+%-------------------------------------------------------------------------------
+\end{longtable}
+
+%-------------------------------------------------------------------------------
+
+\begin{comment}
+The Work Breakdown Structure (WBS) is a fundamental tool in project management, establishing a systematic and structured approach to break down the intricate project into manageable components. This detailed, hierarchical decomposition of the project's scope presents a visual or textual representation that facilitates an understanding of the project's structure, workflow, and tasks necessary for successful project completion. A key note is that the WBS should only include items related to the project and not the project course, this excludes items such as course assignments as they are not a part of the project, only the course.
+
+If you need an anecdote, picture this: "You are a consultant assigned to help clients develop a Work Breakdown Structure (WBS) for their project. This WBS will outline the project's components, giving a clear roadmap of what is to come. You also have internal tasks like time reports, presentations, and assignments for your consulting firm. However, it is important to remember that these internal duties belong outside the client's WBS. They are part of your job, not the client's project. By keeping the WBS client-specific, you maintain clarity and ensure an effective project management strategy."
+
+The WBS dissects the project into multiple layers for ease of management, separating the work into components, work packages, deliverables, and tasks.
+
+\begin{itemize}
+\item \textbf{Components} represent the broad sections or stages of the project.
+\item \textbf{Work Packages} are subsets of these components, which can be further broken down into specific deliverables.
+\item \textbf{Deliverables} are tangible or intangible goods or services produced in the project. They can be handed over physically or digitally to another person or team, forming the backbone of each work package and contributing substantially to the overall project's progression.
+\item \textbf{Tasks} represent the smallest work units necessary to complete each deliverable, providing clear action items for project participants.
+\end{itemize}
+
+By enabling systematic project planning, effective resource allocation, and reliable progress tracking, the WBS becomes an invaluable aid in navigating the complexity of projects and driving them towards successful outcomes.
+
+A small text-based example, recommend visual based, of applying a WBS for a mobile autonomous robot development project is illustrated below, and only one component is added to keep it short for the example. This example should provide a more tangible understanding of the WBS and its purpose.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{\textbf{ID}} & \textbf{Type} & \textbf{Activity}                                          \\ \hline
+    1                    & Root          & Mobile Autonomous Robot Development                        \\ \hline
+    1.1                  & Component     & Navigation and Path Planning                               \\ \hline
+    1.1.1                & Work Package  & Sensor Integration                                         \\ \hline
+    1.1.1.1              & Deliverable   & Sensor Selection Report                                    \\ \hline
+    1.1.1.1.1            & Task          & Research Suitable Sensors (LiDAR, RADAR, Ultrasonic, etc.) \\ \hline
+    1.1.1.1.2            & Task          & Prepare Sensor Selection Report                            \\ \hline
+    1.1.1.2              & Deliverable   & Sensor Installation Manual                                 \\ \hline
+    1.1.1.2.1            & Task          & Install Sensors on Robot Chassis                           \\ \hline
+    1.1.1.2.2            & Task          & Prepare Sensor Installation Manual                         \\ \hline
+    1.1.1.3              & Deliverable   & Sensor Data Fusion                                         \\ \hline
+    1.1.1.3.1            & Task          & Develop Sensor Data Fusion Algorithm                       \\ \hline
+    1.1.1.3.2            & Task          & Implement and Test Sensor Data Fusion Algorithm            \\ \hline
+    1.1.2                & Work Package  & Path Planning                                              \\ \hline
+    1.1.2.1              & Deliverable   & Path Planning                                              \\ \hline
+    1.1.2.1.1            & Task          & Research Suitable Path Planning Algorithms                 \\ \hline
+    1.1.2.1.2            & Task          & Implement Selected Path Planning Algorithm                 \\ \hline
+    1.1.2.2              & Deliverable   & Path Planning Testing Report                               \\ \hline
+    1.1.2.2.1            & Task          & Test Path Planning Algorithm in Simulated Environment      \\ \hline
+    1.1.2.2.2            & Task          & Prepare Path Planning Testing Report                       \\ \hline
+    \end{tabular}%
+\end{table}
+\end{comment}
+
+%===============================================================================
+\subsection{Schedule}
+\label{subsection:schedule}
+
+The software schedule for the project can be seen in Fig.\:\ref{fig:software_schedule} and hardware schedule in Fig.\:\ref{fig:hardware_schedule}. These provide the timeline for the project.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{images/DVA490_software_team_project_schedule.png}
+    \caption{Software team schedule, some tasks and deliverables are excluded to reduce clutter and improve readability.}
+    \label{fig:software_schedule} 
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.63\textwidth]{images/DVA490_hardware_team_project_schedule.png}
+    \caption{Hardware team schedule.}
+    \label{fig:hardware_schedule}
+\end{figure}
+
+%-------------------------------------------------------------------------------
+
+%\helper{Activity plan with a time axis where duration and connection between activities and milestones are shown.}
+
+%===============================================================================

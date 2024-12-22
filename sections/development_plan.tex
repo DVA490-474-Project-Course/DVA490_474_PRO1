@@ -1,0 +1,234 @@
+%===============================================================================
+\section{Development Plan}
+\label{section:development_plan}
+
+This development plan details the development process for the project, and contains important project information. It is crucial to be familiar with all of its details to be able to contribute to the project.
+
+%------------------------------------------------------------------------------
+
+%\helper{Example of a development plan}
+%This Development Plan provides a comprehensive roadmap for the project, detailing our technical approach, the development process, the methodologies we employ, and each team member's distinct roles and responsibilities. The plan is designed to facilitate seamless integration for new members joining at any project lifecycle stage. By becoming familiar with the plan, you will gain crucial insights into our work processes and project-related information, enabling you to contribute effectively and align with the team's objectives.
+
+%===============================================================================
+\subsection{Development Methodology}
+
+The project does not follow any widely recognized development methodology, instead work commences according to an informal methodology. The methodology consists of dividing team members into groups (see Table.\:\ref{tab:contributors_roles}), afterwards the team members follow the schedule (see Section\:\ref{subsection:schedule}) for the current task which has been assigned to them until it is complete. This is reminiscent of the waterfall model. Communication and meetings occur whenever any project member deems it necessary. A minimum of one meeting a week is held to ensure that work is going well and that team members are working on what they should.
+
+%------------------------------------------------------------------------------
+
+% Our team strictly adheres to [specific methodology - e.g., Agile, Scrum, Waterfall, etc.]. We chose this methodology due to its [specific benefits], encompassing practices such as [describe practices].
+
+%===============================================================================
+\subsection{Team Structure and Roles}
+
+The team structure and roles are covered in Staffing (see section\:\ref{section:staffing}) and in Table.\:\ref{tab:contributors_roles}. The team structure and roles were decided by the sponsor.
+
+%------------------------------------------------------------------------------
+
+\begin{comment}
+Please note: The roles listed here might have additional responsibilities outlined in the corresponding plans (Documentation Plan, Communication Plan, Testing Plan).
+
+Our team comprises the following roles:
+
+\begin{itemize}
+    \item \textbf{Hardware Team Leader:} Manages the hardware development process, coordinates with the software team, and ensures timely delivery while maintaining quality standards.
+    \item \textbf{Software Team Leader:} Oversee the software development process, collaborates with the hardware team, and ensure project deadlines are met with high-quality deliverables.
+    \item \textbf{Hardware Developer:} Designs, develops, tests, and troubleshoots hardware components and collaborates with the software team.
+    \item \textbf{Software Developer:} Develops, tests, and debugs software modules and coordinates with the hardware team.
+\end{itemize}
+\end{comment}
+
+%===============================================================================
+\subsection{Tools, Technologies, and Systems}
+\label{subsection:tools_technologies_and_systems}
+
+The \ac{os} that are going to be used are shown in Table.\:\ref{tab:operating_system}.
+\begin{table}[H]
+    \centering
+    \caption{The \ac{os} which will be used in the project.}
+    \label{tab:operating_system}
+    \begin{tabular}{|c|c|c|} \hline
+         \textbf{Operating system} & \textbf{Version/Build} & \textbf{Purpose} \\ \hline
+         \href{https://releases.ubuntu.com/jammy/}{Ubuntu} & 22.04 LTS & Used by software developers \\ \hline
+         \href{https://kubuntu.org/getkubuntu/}{Kubuntu} & 22.04.05 & Used by a software developer \\ \hline
+         \href{https://archlinux.org/}{Arch Linux} & 6.11.1-arch1-1 & Used by a hardware developer \\ \hline
+         \href{https://www.microsoft.com/en-us/download/windows}{Microsoft Windows} & 22H2 (\ac{os} Build 19045.4894) & Used by hardware developers \\ \hline
+    \end{tabular}
+\end{table}
+
+Table.\:\ref{tab:software_development_tools} describes the software development tools which will be used in the project.
+
+\begin{table}[H]
+    \centering
+    \caption{The software development tools which will be used in the project.}
+    \label{tab:software_development_tools}
+    \begin{tabular}{|c|c|c|} \hline
+         \textbf{Tool/Software} & \textbf{Version/Build} & \textbf{Purpose} \\ \hline
+         \href{https://www.vim.org/vim-8.2-released.php}{Vim} & 8.2 and 8.2.2 & Writing code \\ \hline
+         \href{https://neovim.io/}{Neovim} & 0.10.0 and 0.10.1 & Writing code \\ \hline
+         \href{https://www.sublimetext.com/}{Sublime Text} & 4180 & Writing code \\ \hline
+         \href{https://code.visualstudio.com/}{Visual Studio Code} & 1.93.0 and 1.93.1 & Writing code \\ \hline
+         \href{https://www.jetbrains.com/clion/}{CLion} & 2024.2.2 & Writing code \\ \hline
+         \href{https://cmake.org/}{CMake} & 20 & Build tool \\ \hline
+         \href{https://git-scm.com/}{Git} & 2.34.1 & Version control \\ \hline
+         \href{https://github.com/}{GitHub} & N/A (Online tool) & Online Git service \\ \hline
+         \href{https://gitforwindows.org/}{Git Bash} & 2,46,0,windows,1 & Replacement for cmd.exe \\ \hline
+    \end{tabular}
+\end{table}
+
+
+Code is to be written in the programming languages listed in Table.\:\ref{tab:programming_languages}.
+\begin{table}[H]
+    \centering
+    \caption{The programming languages which are to be used in the project.}
+    \label{tab:programming_languages}
+    \begin{tabular}{|c|c|c|} \hline
+         \textbf{Programming language} & \textbf{Standard} & \textbf{Purpose} \\ \hline
+         \href{https://en.cppreference.com/w/cpp/20}{C++} & 20 & Writing of all source code \\ \hline
+         \href{https://www.python.org/downloads/release/python-31012/}{Python} & 3.10.12 & Used for plotting \\ \hline
+    \end{tabular}
+\end{table}
+
+The project will leverage the libraries, middleware and formats listed in Table.\:\ref{tab:libraries_middleware_formats}.
+\begin{table}[H]
+    \centering
+    \caption{Libraries, middleware and formats which will be leveraged in the project.}
+    \label{tab:libraries_middleware_formats}
+    \begin{tabular}{|c|c|c|} \hline
+         \textbf{Tool/Software} & \textbf{Version/Build} & \textbf{Purpose} \\ \hline
+         \href{https://github.com/RoboCup-SSL/grSim}{grSim} & 2.2 & Simulation environment \\ \hline
+         \href{https://github.com/RoboCup-SSL/ssl-vision}{ssl-vision} & 1.0 & Providing positional data from \ac{ssl}-RoboCup cameras. \\ \hline
+         \href{https://github.com/RoboCup-SSL/ssl-game-controller}{ssl-game-controller} & 3.12.3 & Acts as the referee and provides the game state \\ \hline
+         \href{https://github.com/TIGERs-Mannheim/AutoReferee}{AutoReferee} & 1.4.1 & Auto referee software \\ \hline
+         \href{https://docs.ros.org/en/humble/index.html}{\ac{ros2}} & Humble & Robot control and communication \\ \hline
+         \href{https://docs.nav2.org/index.html}{Nav2} & 1.3.2 & Path planning \\ \hline
+         \href{https://github.com/protocolbuffers/protobuf}{Protobuf} & 3.12.4 & Data format for communication \\ \hline
+         \href{https://freertos.org/}{FreeRTOS} & Undecided & Reliability and threading \\ \hline
+         \href{https://google.github.io/googletest/}{GoogleTest} & 1.11.0-3 & Software testing \\ \hline
+         \href{https://matplotlib-cpp.readthedocs.io/en/latest/}{Matplotlib for C++} & 1.4.3 & Used for plotting \\ \hline
+         \href{https://pytorch.org/cppdocs/}{PyTorch C++} & 2.5.0 \acs{cpu} & Developing the \acs{ai} algorithms \\ \hline
+    \end{tabular}
+\end{table}
+
+The project will utilise the hardware tools listed in Table.\:\ref{tab:harware_tools}.
+\begin{table}[H]
+    \centering
+    \caption{The hardware tools which will be used in the project.}
+    \label{tab:harware_tools}
+    \begin{tabularx}{\textwidth}{|c|c|X|} \hline
+         \textbf{Tool/Software} & \textbf{Version/Build} & \textbf{Purpose} \\ \hline
+         \href{https://www.onshape.com/en/}{OnShape} & N/A (Online tool) & 3D-\acs{cad} modelling \\ \hline
+         \href{https://www.kicad.org/}{KiCAD} & 8.0.5 & Electrical schematics design \\ \hline
+         \href{https://www.creality.com/products/creality-k1-max-3d-printer}{Creality K1 Max 3D Printer} & N/A & Printing of the chassi, wheels, motor mounts, kicker mounts, dribbler mount \\ \hline
+         \href{https://eu.store.bambulab.com/en-se/products/p1s}{Bambu Lab P1S 3D Printer} & N/A & Printing of the chassi, wheels, motor mounts, kicker mounts, dribbler mount \\ \hline
+         \href{https://www.clasohlson.com/se/3D-skrivare-FlashForge-Finder-2.0/p/38-9154}{FlashForge Finder 2.0 3D Printer} & N/A & Printing of the chassi, wheels, motor mounts, kicker mounts, dribbler mount \\ \hline
+         Soldering station & N/A & Solder the components on \ac{pcb} \\ \hline
+         Lab bench power supply & N/A & Testing the system without a battery \\ \hline
+    \end{tabularx}
+\end{table}
+
+The preliminary hardware list can be seen in Table.\:\ref{tab:bom}, available in Appendix\:\ref{appendix:bom}.
+
+The project management tools which will be used in the the project are shown in Table.\:\ref{tab:management_tools}.
+\begin{table}[H]
+    \centering
+    \caption{The management tools which will be used in the project.}
+    \label{tab:management_tools}
+    \begin{tabular}{|c|c|c|} \hline
+         \textbf{Tool/Software} & \textbf{Version/Build} & \textbf{Purpose} \\ \hline
+         \href{https://mermaid.js.org/}{Mermaid} & N/A (Online tool) & Create gantt charts and block diagrams \\ \hline
+         \href{https://www.edrawmax.com/}{EdrawMax} & N/A (Online tool) & Create the \ac{wbs} \\ \hline
+         \href{https://www.drawio.com/}{draw.io} & N/A (Online tool) & Create the milestone plan \\ \hline
+         \href{https://www.microsoft.com/en-us/microsoft-365/excel}{Microsoft Excel} & Uncertain & Create of \ac{bom} \\ \hline
+         \href{https://www.libreoffice.org/}{LibreOffice} & 7.3.7.2 & Spreadsheet editing \\ \hline
+         \href{https://www.visidata.org/}{VisiData} & 2.2.1 & Spreadsheet editing \\ \hline
+         \href{https://www.zotero.org/}{Zotero} & 7.0.7 & Reference management \\ \hline
+    \end{tabular}
+\end{table}
+
+The communication tools in Table.\:\ref{tab:communication_tools} will be used in this project.
+\begin{table}[H]
+    \centering
+    \caption{The communication tools which will be used in this project.}
+    \label{tab:communication_tools}
+    \begin{tabularx}{\textwidth}{|c|c|X|} \hline
+         \textbf{Tool/Software} & \textbf{Version/Build} & \textbf{Purpose} \\ \hline
+         \href{https://discord.com/}{Discord} & Windows (10), Linux (0.0.71) and Online & Team communication \\ \hline
+         \href{https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook}{Outlook} & N/A (Online tool) & Communication with supervisors, stakeholders, teachers and retailers \\ \hline
+         \href{https://www.microsoft.com/en-us/microsoft-teams/log-in}{Microsoft Teams} & N/A (Online tool) & Communication with collaborators (\ac{udea} and \ac{utp}) \\ \hline
+    \end{tabularx}
+\end{table}
+
+%------------------------------------------------------------------------------
+
+\begin{comment}
+We leverage the following tools, technologies, and systems in our project:
+
+\begin{itemize}
+\item \textbf{Software Development Tools:} Include various programming languages and 3D modelling software. For instance, [Programming Language] is used for [purpose] and can be downloaded from [source]. For 3D modelling, we use [Software name], which can be downloaded from [source].
+\item \textbf{Project Management Tools:} We utilize [Tool/Platform Name, version] for [purpose], and it can be downloaded from [source].
+\item \textbf{Communication Tools:} For effective communication, we use [Tool/Platform Name, version], which can be downloaded from [source].
+\item \textbf{Hardware Tools and Software:} We utilize tools like a 3D printer ([specify model]) and PCB Design Software ([Software Name]) which can be downloaded from [source].
+\item \textbf{Operating Systems:} We primarily operate on [Operating System name and version]. Please align your system with the same for consistency and compatibility. If your system operates differently, notify the team for assistance with potential compatibility issues.
+\item \textbf{Hardware:} We primarily use [Computer model/brand] with [specify processor, RAM, storage]. Please let us know if you use a different model for compatibility checks.
+\end{itemize}
+
+Please install the correct version numbers as specified for consistency and compatibility.
+\end{comment}
+
+%===============================================================================
+\subsection{Coding Standards and Guidelines}
+\label{subsection:coding_standards_and_guidelines}
+
+The project will strictly adhere to the Google C++ Style Guide coding standard and the file structure described in Fig.\:\ref{fig:project_structure}, also available on the projects GitHub repository \href{https://github.com/DVA490-474-Project-Course/project-structure}{project-structure}\footnote{https://github.com/DVA490-474-Project-Course/project-structure}. This was done to ensure uniformity, facilitate future development and allow for easy contribution. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\linewidth]{images/project_structure.png}
+    \caption{The software file structure which will be followed in this project. Note that the file names and contents of the directories are just placeholders to give a visual representation of the structure.}
+    \label{fig:project_structure}
+\end{figure}
+
+%------------------------------------------------------------------------------
+
+%To ensure high code quality and readability, we follow these coding standards and guidelines: [Outline specific standards and guidelines]. For more comprehensive information, refer to our detailed coding standards document [footnote or ref to document].
+
+%===============================================================================
+\subsection{Version Control}
+\label{subsection:version_control}
+
+The project will use the version control tool Git to manage changes, versions, history and documentation of all files in the project. The projects \href{https://github.com/DVA490-474-Project-Course}{GitHub}\footnote{https://github.com/DVA490-474-Project-Course} page will contain all the project material and is public and available to everyone.
+
+%------------------------------------------------------------------------------
+
+%We utilize [Version Control System Name, e.g., Git] to manage changes to our project files and maintain different versions. For detailed guidance on using this system, please refer to our [footnote or ref to version control usage guide].
+
+%===============================================================================
+\subsection{Testing and Quality Assurance}
+
+% Software
+Software testing and quality assurance will be done using GoogleTest. Unit tests will be created for every developed function. Integration tests will additionally be created for every module and sub module. All tests are to be run before committing a new feature or change to GitHub.
+
+% Hardware
+Standardised tests for the hardware will be used to calibrate sensors and verify that the sensors behave according to the specifications in the data sheet. These tests should be done every time the robot is used.
+
+%------------------------------------------------------------------------------
+
+%We employ [describe testing methodologies] for our testing and QA. For detailed information on our testing process, refer to our [footnote or ref to Testing and QA document or section].
+
+%===============================================================================
+\subsection{Integration and Deployment}
+\label{subsection:integration_and_deployment}
+
+The integration of the system will follow a structured approach, combining both software and hardware modules. 
+Each software module will be developed separately and will be integrated together once it is ready and has passed its individual unit tests for all the functions it contains. Software modules will first be integrated together with other software modules and tested using integration tests. Afterwards, the hardware components will be integrated in the tests, such as the sensors, motors, and kickers. The hardware components will be integrated one at a time with a focus on ensuring accurate output and functionality when combined with the software. 
+
+It is important to always test and verify the functionality of the modules during the integration phase. Verification will be done by performing unit, integration, and \ac{hil} tests. 
+The software modules will be tested in a simulation environment using grSim, while \ac{hil} tests will simulate real-world conditions by integrating hardware components. 
+
+Once the functionality of the modules has been verified and all tests have passed, the deployment phase begins. At this point full deployment tests will be done, which consist of testing the entire system in deployment settings ensuring the functionality of the complete system.
+
+%------------------------------------------------------------------------------
+
+%Our integration strategy involves [describe strategy, e.g., Continuous Integration]. The deployment process includes [describe process], facilitated by specific tools. For comprehensive information on these processes, refer to our integration and deployment guide [footnote or ref to guide].
+
+%===============================================================================
